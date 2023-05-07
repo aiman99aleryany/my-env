@@ -33,6 +33,13 @@ Vim configuration with Tmux, Alacritty and Starship
 
 with the command `:CocInstall <Plugin name>`
 
+# Nerd fonts
+
+  - `Hack` patched font for Icons in Vim.
+  
+  
+# Put all this configuration in the home directory of your Linux system :)
+
 
 # Have fun hacking :]  , or coding
 
