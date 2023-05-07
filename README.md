@@ -34,6 +34,6 @@ Vim configuration with Tmux, Alacritty and Starship
 with the command `:CocInstall <Plugin name>`
 
 
-Have fun hacking :]  , or coding
+# Have fun hacking :]  , or coding
 
 
