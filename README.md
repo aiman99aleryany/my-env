@@ -9,6 +9,7 @@ Add `.vimrc` and `.tmux.conf` files to the home directory of your System
 
 
 # CoC vim plugins to install:
+
 1- coc-json
 2- coc-tsserver
 3- coc-pairs
