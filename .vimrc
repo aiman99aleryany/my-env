@@ -81,9 +81,10 @@ set nocompatible
 set redrawtime=10000
 set background=dark
 set laststatus=2
+set noshowmode
 set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set nu
@@ -149,10 +150,15 @@ Plug 'mattn/emmet-vim'
 " eslint
 Plug 'eslint/eslint'
 
-" ayu theme
-Plug 'Luxed/ayu-vim'
+" dracula theme
 
+Plug 'dracula/vim', { 'as': 'dracula' }
 
+" devicons
+Plug 'ryanoasis/vim-devicons'
+
+" git branch 
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -379,8 +385,6 @@ let g:prettier#exec_cmd_path = "~/.vim/plugged/vim-prettier/node_modules/prettie
 let g:prettier#config#print_width = 100 " default is 'auto'
 
 
-let g:ayucolor="dark"
-
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -388,9 +392,28 @@ if exists('+termguicolors')
 endif
 
 
+" for Dracula theme
+colorscheme dracula
+hi Normal guibg=NONE ctermbg=NONE
 
-colorscheme ayu
+" for transparent window 
+let t:isTransparent = 0
 
 
-
+" for lightline configuration 
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'active': {
+      \   'right':[
+      \             ['lineinfo'],
+      \            ['percent'],
+      \            ['filetype']
+      \           ],
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'filename', 'readonly', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \}
 
