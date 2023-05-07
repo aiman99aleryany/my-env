@@ -31,7 +31,7 @@ Vim configuration with Tmux, Alacritty and Starship
   5. coc-css
   6. coc-html-css-support
 
-with the command `CocInstall <Plugin name>`
+with the command `:CocInstall <Plugin name>`
 
 
 Have fun hacking :]  , or coding
