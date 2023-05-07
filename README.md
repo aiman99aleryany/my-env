@@ -21,6 +21,7 @@ Vim configuration with Tmux, Alacritty and Starship
 
   - Installation guide here: https://github.com/tmux/tmux/wiki/Installing
   - Configuration file in this repo.
+  - Make sure to install all the plugins with <leader> i while in Tmux.
 
 # CoC vim plugins to install:
 
