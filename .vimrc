@@ -26,11 +26,6 @@ set wildmenu
 " Things to consider:
 " - :b lets you autocomplete any open buffer
 
-
-" Cursor 
-"let &t_SI="\e[6 q"
-"let &t_EI="\e[2 q"
-
 " to avoid peeping in vim
 set visualbell
 set t_vb=
@@ -73,10 +68,6 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " nnoremap ,html :-1read $HOME/.vim/file.html<CR>3jwf>a
 " <CR> stands for 'enter' key, then you can type normal mode commands
 
-
-
-
-
 set nocompatible
 set redrawtime=10000
 set background=dark
@@ -103,9 +94,9 @@ set colorcolumn=100
 " Column color set to grey
 highlight ColorColumn ctermbg=1
 
-
-let &t_SI = "\e[2 q"
-let &t_EI = "\e[2 q"
+" Cursor
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[1 q"
 
 
 " Plugins installation using Vim-Plug
@@ -136,29 +127,19 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-
-" Python code formatter
-Plug 'ambv/black'
-" use this if you want later :Black to format python code
-
-" live server 
-Plug 'manzeloth/live-server'
-
 " emmet
 Plug 'mattn/emmet-vim'
 
 " eslint
 Plug 'eslint/eslint'
 
-" dracula theme
-
-Plug 'dracula/vim', { 'as': 'dracula' }
-
 " devicons
 Plug 'ryanoasis/vim-devicons'
 
 " git branch 
 Plug 'tpope/vim-fugitive'
+
+" Themes
 
 call plug#end()
 
@@ -173,12 +154,12 @@ nmap <leader><leader>p :Prettier<cr>
 nmap <leader><leader>b :Buffers<cr>
 nmap <leader><leader>u :UndotreeToggle<cr>
 nmap <leader><leader>w :Windows<cr>
+nmap <leader><leader>x :CocRestart<cr>
 nmap <C-d> <C-d>zz
 nmap <C-u> <C-u>zz
 
 " Files (runs $FZF_DEFAULT_COMMAND if defined)
 nmap <leader><leader>g :GFiles<cr>
-nmap <leader><leader><leader>g :GoMetaLinter<cr>
 nnoremap <C-p> :Files<CR>
 nnoremap <leader><leader>c :call nerdcommenter#Comment(0,"toggle")<CR>
 vnoremap <leader><leader>c :call nerdcommenter#Comment(0,"toggle")<CR>
@@ -391,18 +372,14 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-
-" for Dracula theme
-colorscheme dracula
-hi Normal guibg=NONE ctermbg=NONE
-
-" for transparent window 
-let t:isTransparent = 0
+ "for transparent window 
+"hi Normal guibg=NONE ctermbg=NONE
+"let t:isTransparent = 1
 
 
 " for lightline configuration 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'darkspace',
       \ 'active': {
       \   'right':[
       \             ['lineinfo'],

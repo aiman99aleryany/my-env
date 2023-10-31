@@ -1,0 +1,6 @@
+
+new  -s Backend -n Vim 'vim .' 
+neww -n Git 
+neww -n Server 
+neww -n Terminal
+selectw -t 1

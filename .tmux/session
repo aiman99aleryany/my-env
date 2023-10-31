@@ -1,4 +1,4 @@
-new  -s frontend -n Vim 'vim .' 
+new  -s Frontend -n Vim 'vim .' 
 neww -n Git 
 neww -n Server 
 neww -n Terminal
